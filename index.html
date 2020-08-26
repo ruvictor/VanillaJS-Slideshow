@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValillaJS Slideshow</title>
+</head>
+<body>
+    <script>
+        // slide list
+        var slides = [];
+        slides[0] = 'slide1.jpg';
+        slides[1] = 'slide2.jpg';
+        slides[2] = 'slide3.jpg';
+
+        // main function
+        var step = 0; // step
+        let slider = () => {
+            document.slide.src = slides[step];
+            step < slides.length - 1 ? step++ : step = 0
+            setTimeout("slider()", 1000);
+        }
+
+        window.onload = slider;
+    </script>
+    <img name="slide">
+</body>
+</html>
